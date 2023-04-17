@@ -1,0 +1,44 @@
+[project]
+name = 'cron2schedule'
+version = '0.0.1'
+license = {file='LICENSE'}
+authors = [{name='blem14'}]
+classifiers = [
+    'Development Status :: 5 - Production/Stable',
+    'Programming Language :: Python',
+    'License :: OSI Approved :: MIT License',
+]
+readme = 'README.md'
+
+dynamic = ['version', 'description']
+requires-python = '>= 3.6'
+dependencies = [
+    'schedules'
+]
+
+[project.urls]
+Source = 'https://github.com/blem14/cron2schedule'
+
+
+[project.optional-dependencies]
+dev = [
+    'pyTest',
+    'pyTest-cov',
+]
+
+[build-system]
+requires = ['setuptools', 'wheel']
+
+
+
+# Test runner: pyTest
+
+[tool.pytest.ini_options]
+addopts = '--verbose'
+testpaths = ['tests']
+
+
+# Code coverage: Coverage.py
+
+[tool.coverage.run]
+source = ['src']
